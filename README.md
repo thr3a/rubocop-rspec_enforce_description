@@ -1,4 +1,4 @@
-# Rubocop::RspecEnforceDescription
+# RuboCop::RspecEnforceDescription
 
 TODO: Delete this and the text below, and describe your gem
 
@@ -10,7 +10,7 @@ TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_O
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG --require=false
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 

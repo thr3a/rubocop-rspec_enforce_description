@@ -1,8 +1,7 @@
-AllCops:
-  TargetRubyVersion: 3.0
+plugins:
+  - rubocop-internal_affairs
+  - rubocop-rspec_enforce_description
 
-Style/StringLiterals:
-  EnforcedStyle: double_quotes
-
-Style/StringLiteralsInInterpolation:
-  EnforcedStyle: double_quotes
+Naming/FileName:
+  Exclude:
+    - lib/rubocop-rspec_enforce_description.rb

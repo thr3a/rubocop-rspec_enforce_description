@@ -4,7 +4,7 @@ require_relative "lib/rubocop/rspec_enforce_description/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rubocop-rspec_enforce_description"
-  spec.version = Rubocop::RspecEnforceDescription::VERSION
+  spec.version = RuboCop::RspecEnforceDescription::VERSION
   spec.authors = ["thr3a"]
   spec.email = ["thr3a@example.com"]
 
@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
   spec.description = "TODO: Write a longer description or delete this line."
   spec.homepage = "TODO: Put your gem's website or public repo URL here."
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.0.0"
+  spec.required_ruby_version = ">= 2.7.0"
 
   spec.metadata["allowed_push_host"] = "TODO: Set to your gem server 'https://example.com'"
 
@@ -38,4 +38,10 @@ Gem::Specification.new do |spec|
 
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
+
+  spec.metadata['default_lint_roller_plugin'] = 'RuboCop::RspecEnforceDescription::Plugin'
+
+  spec.add_dependency 'lint_roller', '~> 1.1'
+  spec.add_dependency 'rubocop', '>= 1.72.2'
 end
+
