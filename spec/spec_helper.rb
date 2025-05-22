@@ -1,7 +1,5 @@
-# frozen_string_literal: true
-
-require 'rubocop-rspec_enforce_description'
-require 'rubocop/rspec/support'
+require "rubocop-rspec_enforce_description"
+require "rubocop/rspec/support"
 
 RSpec.configure do |config|
   config.disable_monkey_patching!

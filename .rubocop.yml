@@ -1,7 +1,142 @@
-plugins:
-  - rubocop-internal_affairs
-  - rubocop-rspec_enforce_description
+AllCops:
+  NewCops: enable
+  DisplayCopNames: true
+  SuggestExtensions: false
 
-Naming/FileName:
-  Exclude:
-    - lib/rubocop-rspec_enforce_description.rb
+# 日本語のコメントを許可する
+Style/AsciiComments:
+  Enabled: false
+
+# self.xx を許可
+Style/RedundantSelf:
+  Enabled: false
+
+# ダブルクォーテーション
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+# 行数チェックは無効化
+Layout/LineLength:
+  Enabled: false
+
+# トップレベルのクラスのドキュメントコメントがありませんを無効化
+Style/Documentation:
+  Enabled: false
+
+# %w()とかで統一する
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    "%": ()
+    "%i": ()
+    "%q": ()
+    "%Q": ()
+    "%r": ()
+    "%s": ()
+    "%w": ()
+    "%W": ()
+    "%x": ()
+
+# ifかunlessかは場合によって選びたい
+Style/IfUnlessModifier:
+  Enabled: false
+
+# if!とunlessは別物
+Style/NegatedIf:
+  Enabled: false
+
+# rakeタスクとかで困る
+Lint/UnusedBlockArgument:
+  Enabled: false
+
+# https://qiita.com/rorensu2236/items/d0d685307b75bdaf179f
+Style/HashEachMethods:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
+
+# メトリクス系は一旦全無視で
+Metrics/AbcSize:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Metrics/BlockNesting:
+  Enabled: false
+Metrics/ClassLength:
+  Enabled: false
+Metrics/CyclomaticComplexity:
+  Enabled: false
+Metrics/MethodLength:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Metrics/ParameterLists:
+  Enabled: false
+Metrics/PerceivedComplexity:
+  Enabled: false
+
+# frozen_string_literal記述不可
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+# 空メソッドも複数行で書くべき
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+# あとで考える
+Style/GuardClause:
+  Enabled: false
+
+# n > 0 使いたい
+Style/NumericPredicate:
+  Enabled: false
+
+# 7桁以上なら数字に_必須
+Style/NumericLiterals:
+  Enabled: false
+
+# rescue => e で書きたい
+Style/RescueStandardError:
+  EnforcedStyle: implicit
+
+# === 使いたい
+Style/CaseEquality:
+  Enabled: false
+
+# 大量引数は避けるべきだがしゃーないときもある
+Naming/MethodParameterName:
+  Enabled: false
+
+# rescue nilを1行で書きたい
+Style/RescueModifier:
+  Enabled: false
+
+# do endブロックをいい感じに
+Layout/BlockAlignment:
+  EnforcedStyleAlignWith: start_of_block
+
+# 複数行ハッシュで無駄なスペース作らないように
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/MultilineMethodCallIndentation:
+  EnforcedStyle: indented_relative_to_receiver
+
+# Lambdaは ->(x) { x } で書く
+Style/Lambda:
+  EnforcedStyle: literal
+
+# 三項演算子のカッコ統一
+Style/TernaryParentheses:
+  EnforcedStyle: require_parentheses_when_complex
+
+# 三項演算子の場合もスタイルを統一しようとするので無効化
+Style/ConditionalAssignment:
+  Enabled: false
+
+# 最初のパラメータに位置を合わせるではなくメソッド呼び出しの行から1段階インデント
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
