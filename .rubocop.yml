@@ -140,3 +140,6 @@ Style/ConditionalAssignment:
 # 最初のパラメータに位置を合わせるではなくメソッド呼び出しの行から1段階インデント
 Layout/ArgumentAlignment:
   EnforcedStyle: with_fixed_indentation
+
+Naming/FileName:
+  Enabled: false
