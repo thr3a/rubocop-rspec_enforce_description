@@ -29,3 +29,12 @@ context 'ログインしているとき' do
 end
 # ↑ 警告: Context description should end with [場合].
 ```
+
+## itの説明文の最後が「こと」になっていること
+
+```ruby
+it '大文字になります' do
+  # ...
+end
+# ↑ 警告: It description should end with [こと].
+```
