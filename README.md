@@ -9,11 +9,11 @@ RSpecの各ブロックの説明文のルールを提供する[RuboCop](https://
 bundle add rubocop-rspec_enforce_description
 ```
 
-.rubocop.ymlへの設定例
+.rubocop.ymlへの設定
 
 ```yaml
 require:
-  - rubocop/rspec_enforce_description
+  - rubocop-rspec_enforce_description
 
 RSpec/EnforceDescription:
   Enabled: true
@@ -21,7 +21,7 @@ RSpec/EnforceDescription:
 
 # ルール
 
-## contectの説明文の最後が「場合」になっていること
+## contextの説明文の最後が「場合」になっていること
 
 ```ruby
 context 'ログインしているとき' do
